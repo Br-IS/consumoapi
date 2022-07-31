@@ -3,16 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule, routingComponents} from './app-routing.module';
+import { InicioComponent } from './inicio/inicio.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MusicaComponent } from './musica/musica.component';
+import { ListaComponent } from './lista/lista.component';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AsignarComponent } from './asignar/asignar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InicioComponent,
+    NavbarComponent,
+    MusicaComponent,
+    ListaComponent,
+    routingComponents,
+    AsignarComponent,
+
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

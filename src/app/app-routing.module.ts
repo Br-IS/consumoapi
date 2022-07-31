@@ -1,12 +1,36 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from "@angular/router";
+import {MusicaComponent} from "./musica/musica.component";
+import {InicioComponent} from "./inicio/inicio.component";
+import {ListaComponent} from "./lista/lista.component";
+import {AsignarComponent} from "./asignar/asignar.component";
 
+const routes: Routes = [
+
+  {path: '', component: InicioComponent},
+  {path: 'musica', component: MusicaComponent},
+  {path: 'lista', component: ListaComponent},
+  {path: 'lista/:nombre', component: ListaComponent},
+  {path: 'musica/:titulo', component: MusicaComponent},
+  {path: 'asignar', component: AsignarComponent},
+  {path: 'asignar/:titulo', component: AsignarComponent},
+  //{path: 'asignar/:nombre/:titulo', component: AsignarComponent},
+
+]
+
+//asignar
 
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
   ]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule {
+}
+
+export const routingComponents = [InicioComponent]
