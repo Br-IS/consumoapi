@@ -4,6 +4,7 @@ import {MusicaComponent} from "./musica/musica.component";
 import {InicioComponent} from "./inicio/inicio.component";
 import {ListaComponent} from "./lista/lista.component";
 import {AsignarComponent} from "./asignar/asignar.component";
+import {ApiComponent} from "./api/api.component";
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'musica/:titulo', component: MusicaComponent},
   {path: 'asignar', component: AsignarComponent},
   {path: 'asignar/:titulo', component: AsignarComponent},
+  {path: 'api', component: ApiComponent},
   //{path: 'asignar/:nombre/:titulo', component: AsignarComponent},
 
 ]

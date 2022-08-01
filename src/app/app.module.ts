@@ -11,6 +11,7 @@ import { ListaComponent } from './lista/lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AsignarComponent } from './asignar/asignar.component';
+import { ApiComponent } from './api/api.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AsignarComponent } from './asignar/asignar.component';
     ListaComponent,
     routingComponents,
     AsignarComponent,
+    ApiComponent,
 
   ],
   imports: [
